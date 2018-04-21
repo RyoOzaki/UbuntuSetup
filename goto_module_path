@@ -1,0 +1,2 @@
+#!/bin/sh
+cd /home/ema/.pyenv/versions/NPB-DAA_dev/lib/python3.6/site-packages
