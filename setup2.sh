@@ -29,7 +29,7 @@ echo
 
 echo "Setup atom editor..."
 mkdir -p ${HOME}/.atom
-echo 'process.env.PATH = ["/home/ema/.pyenv/shims/python", process.env.PATH].join(":")' >> ${ATOM_COFFEE}
+echo 'process.env.PATH = ["${HOME}/.pyenv/shims/python", process.env.PATH].join(":")' >> ${ATOM_COFFEE}
 yes | python -m pip install ipykernel
 yes | python -m ipykernel install --user
 for LIB_NAME in ${APM_LIBRARIES}
