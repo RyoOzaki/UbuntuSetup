@@ -1,11 +1,11 @@
 #!/bin/bash
 
 PYTHON_VERSION="3.6.5"
-VIRTUALENV_NAME="NPB-DAA_dev"
+VIRTUALENV_NAME="dev"
 
-APT_LIBRARIES="git mousepad gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev tk-dev ipython3 htop atom"
-PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython ipyparallel jupyter cython numba joblib autopep8"
-APM_LIBRARIES="hydrogen autocomplete-python highlight-selected"
+APT_LIBRARIES="git mousepad gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev tk-dev htop atom"
+PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython numba joblib autopep8"
+APM_LIBRARIES="autocomplete-python highlight-selected hydrogen"
 
 PROFILE_FILE="~/.profile"
 ATOM_COFFEE="~/.atom/init.coffee"
