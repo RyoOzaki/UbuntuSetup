@@ -32,14 +32,14 @@ echo
 
 echo "Setting profile of pyenv and virtualenv..."
 touch ${PROFILE_FILE}
+echo >> ${PROFILE_FILE}
 echo '# pyenv and virtualenv commands.' >> ${PROFILE_FILE}
-echo 'export PYENV_ROOT=$HOME/.pyenv' >> ${PROFILE_FILE}
-echo 'export PATH=$PYENV_ROOT/bin:$PATH' >> ${PROFILE_FILE}
+echo 'export PYENV_ROOT=${HOME}/.pyenv' >> ${PROFILE_FILE}
+echo 'export PATH=${PYENV_ROOT}/bin:${PATH}' >> ${PROFILE_FILE}
 echo 'eval "$(pyenv init -)"' >> ${PROFILE_FILE}
 echo 'eval "$(pyenv virtualenv-init -)"' >> ${PROFILE_FILE}
 echo "Done."
 echo
 
 echo "Finished setup1.sh!!"
-echo "Please run setup2.sh"
-exec ${SHELL} -l
+echo "Please run 'source ~/.profile' and 'sh setup2.sh'"
