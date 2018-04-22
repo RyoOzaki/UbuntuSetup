@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APT_LIBRARIES="git mousepad gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev tk-dev htop atom"
+APT_LIBRARIES="mousepad gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev tk-dev htop atom"
 
 PROFILE_FILE="${HOME}/.profile"
 
