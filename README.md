@@ -9,4 +9,3 @@ But, I do not check in other pc.
 3. sh setup1.sh
 4. source ~/.profile
 5. sh setup2.sh
-That's all!!
