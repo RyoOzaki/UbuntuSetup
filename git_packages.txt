@@ -1,0 +1,4 @@
+https://github.com/mcfletch/sphfile
+https://github.com/jameslyons/python_speech_features
+https://github.com/mattjj/pybasicbayes
+https://github.com/mattjj/pyhsmm

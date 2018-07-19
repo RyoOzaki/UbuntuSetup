@@ -5,11 +5,6 @@ VIRTUALENV_NAME="dev"
 
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
 
-SPHFILE_GIT="https://github.com/mcfletch/sphfile"
-FEATURES_GIT="https://github.com/jameslyons/python_speech_features"
-PYBASICBAYES_GIT="https://github.com/mattjj/pybasicbayes"
-PYHSMM_GIT="https://github.com/mattjj/pyhsmm"
-
 echo "Setup pyenv and virtualenv..."
 pyenv install ${PYTHON_VERSION}
 pyenv virtualenv ${PYTHON_VERSION} ${VIRTUALENV_NAME}
@@ -33,39 +28,15 @@ yes | apm install --packages-file apm_packages.txt
 echo "Done."
 echo
 
-echo "Installing sphfile..."
-git clone ${SPHFILE_GIT}
-cd sphfile
-python setup.py install
-cd ../
-rm -rf sphfile
-echo "Done."
-echo
-
-echo "Installing python_speech_features..."
-git clone ${FEATURES_GIT}
-cd python_speech_features
-python setup.py install
-cd ../
-rm -rf python_speech_features
-echo "Done."
-echo
-
-echo "Installing pybasicbayes..."
-git clone ${PYBASICBAYES_GIT}
-cd pybasicbayes
-python setup.py install
-cd ../
-rm -rf pybasicbayes
-echo "Done."
-echo
-
-echo "Installing pyhsmm..."
-git clone ${PYHSMM_GIT}
-cd pyhsmm
-python setup.py install
-cd ../
-rm -rf pyhsmm
+echo "Install Python libraries from git repositories..."
+for GIT_URL in `cat git_packages.txt`
+do
+  git clone ${GIT_URL} git_work
+  cd git_work
+  python setup.py install
+  cd ../
+  rm -rf git_work
+done
 echo "Done."
 echo
 
