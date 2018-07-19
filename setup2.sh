@@ -4,8 +4,6 @@ PYTHON_VERSION="3.6.5"
 VIRTUALENV_NAME="dev"
 
 PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython joblib autopep8"
-APM_LIBRARIES="git-plus git-history git-log merge-conflicts autocomplete-python highlight-selected platformio-ide-terminal hydrogen"
-
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
 
 SPHFILE_GIT="https://github.com/mcfletch/sphfile"
@@ -35,10 +33,7 @@ mkdir -p ${HOME}/.atom
 echo 'process.env.PATH = ["'${HOME}'/.pyenv/shims/python", process.env.PATH].join(":")' >> ${ATOM_COFFEE}
 yes | python -m pip install ipykernel
 yes | python -m ipykernel install --user
-for LIB_NAME in ${APM_LIBRARIES}
-do
-  yes | apm install ${LIB_NAME}
-done
+yes | apm install --packages-file apm_packages.txt
 echo "Done."
 echo
 

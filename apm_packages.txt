@@ -1,0 +1,8 @@
+git-plus
+git-history
+git-log
+merge-conflicts
+autocomplete-python
+highlight-selected
+platformio-ide-terminal
+hydrogen
