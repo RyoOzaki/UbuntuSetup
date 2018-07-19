@@ -8,6 +8,8 @@ APM_LIBRARIES="autocomplete-python highlight-selected hydrogen"
 
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
 
+SPHFILE_GIT="https://github.com/mcfletch/sphfile"
+FEATURES_GIT="https://github.com/jameslyons/python_speech_features"
 PYBASICBAYES_GIT="https://github.com/mattjj/pybasicbayes"
 PYHSMM_GIT="https://github.com/mattjj/pyhsmm"
 
@@ -36,6 +38,24 @@ for LIB_NAME in ${APM_LIBRARIES}
 do
   yes | apm install ${LIB_NAME}
 done
+echo "Done."
+echo
+
+echo "Installing sphfile..."
+git clone ${SPHFILE_GIT}
+cd sphfile
+python setup.py install
+cd ../
+rm -rf sphfile
+echo "Done."
+echo
+
+echo "Installing python_speech_features..."
+git clone ${FEATURES_GIT}
+cd python_speech_features
+python setup.py install
+cd ../
+rm -rf python_speech_features
 echo "Done."
 echo
 
