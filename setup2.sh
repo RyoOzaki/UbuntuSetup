@@ -4,7 +4,7 @@ PYTHON_VERSION="3.6.5"
 VIRTUALENV_NAME="dev"
 
 PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython joblib autopep8"
-APM_LIBRARIES="git-control git-plus git-history git-log autocomplete-python highlight-selected hydrogen"
+APM_LIBRARIES="git-plus git-history git-log merge-conflicts autocomplete-python highlight-selected hydrogen"
 
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
 
