@@ -3,7 +3,6 @@
 PYTHON_VERSION="3.6.5"
 VIRTUALENV_NAME="dev"
 
-PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython joblib autopep8"
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
 
 SPHFILE_GIT="https://github.com/mcfletch/sphfile"
@@ -21,10 +20,7 @@ echo
 
 echo "Install Python libraries..."
 yes | pip install --upgrade pip
-for LIB_NAME in ${PIP_LIBRARIES}
-do
-  yes | pip install --no-cache-dir ${LIB_NAME}
-done
+yes | pip install -r pip_packages.txt
 echo "Done."
 echo
 
