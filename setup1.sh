@@ -1,7 +1,5 @@
 #!/bin/bash
 
-APT_LIBRARIES="mousepad gcc make openssl libssl-dev libbz2-dev libreadline-dev libsqlite3-dev tk-dev htop atom"
-
 PROFILE_FILE="${HOME}/.profile"
 
 PYENV_GIT="https://github.com/yyuu/pyenv.git"
@@ -17,10 +15,7 @@ echo "Done."
 echo
 
 echo "Install libraries..."
-for LIB_NAME in ${APT_LIBRARIES}
-do
-  yes | sudo apt install ${LIB_NAME}
-done
+yes | sudo apt install $(cat apt_packages.txt)
 echo "Done."
 echo
 
