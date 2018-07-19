@@ -3,7 +3,7 @@
 PYTHON_VERSION="3.6.5"
 VIRTUALENV_NAME="dev"
 
-PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython numba joblib autopep8"
+PIP_LIBRARIES="numpy scipy matplotlib scikit-learn tqdm wheel ipython jupyter cython joblib autopep8"
 APM_LIBRARIES="autocomplete-python highlight-selected hydrogen"
 
 ATOM_COFFEE="${HOME}/.atom/init.coffee"
