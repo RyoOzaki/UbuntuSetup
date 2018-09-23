@@ -5,20 +5,6 @@ PROFILE_FILE="${HOME}/.profile"
 PYENV_GIT="https://github.com/yyuu/pyenv.git"
 VIRTUALENV_GIT="https://github.com/yyuu/pyenv-virtualenv.git"
 
-sudo echo "Get sudo password!"
-
-echo "Update libraries..."
-yes | sudo add-apt-repository ppa:webupd8team/atom
-sudo apt update
-yes | sudo apt upgrade
-echo "Done."
-echo
-
-echo "Install libraries..."
-yes | sudo apt install $(cat apt_packages.txt)
-echo "Done."
-echo
-
 echo "Install pyenv and virtualenv..."
 git clone ${PYENV_GIT} ${HOME}/.pyenv
 git clone ${VIRTUALENV_GIT} ${HOME}/.pyenv/plugins/pyenv-virtualenv
@@ -33,8 +19,10 @@ echo 'export PYENV_ROOT=${HOME}/.pyenv' >> ${PROFILE_FILE}
 echo 'export PATH=${PYENV_ROOT}/bin:${PATH}' >> ${PROFILE_FILE}
 echo 'eval "$(pyenv init -)"' >> ${PROFILE_FILE}
 echo 'eval "$(pyenv virtualenv-init -)"' >> ${PROFILE_FILE}
-echo "Done."
-echo
 
-echo "Finished setup1.sh!!"
-echo "Please run 'source ~/.profile' and 'sh setup2.sh'"
+export PYENV_ROOT=${HOME}/.pyenv
+export PATH=${PYENV_ROOT}/bin:${PATH}
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+echo "Done."
