@@ -5,4 +5,6 @@ merge-conflicts
 autocomplete-python
 highlight-selected
 platformio-ide-terminal
+language-latex
+pdf-view
 hydrogen

@@ -9,4 +9,5 @@ libsqlite3-dev
 tk-dev
 htop
 sox
+texlive-full
 atom
