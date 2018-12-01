@@ -10,4 +10,6 @@ sh scripts/atom.sh
 
 sh scripts/git.sh
 
+cp config_files/.latexmkrc ~/
+
 echo "finished!!"
