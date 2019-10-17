@@ -1,6 +1,5 @@
 mousepad
-gcc
-make
+build-essential
 openssl
 libssl-dev
 libbz2-dev
@@ -11,3 +10,4 @@ htop
 sox
 texlive-full
 atom
+wget
