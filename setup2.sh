@@ -2,7 +2,7 @@
 
 # mkdir logs
 
-sh scripts/pyenv_make_env.sh
+sh scripts/pyenv_make_env.sh -v 3.6.5 -n dev
 
 sh scripts/pip.sh
 
