@@ -1,9 +1,26 @@
 #!/bin/bash
 
 PROFILE_FILE="${HOME}/.profile"
+# PROFILE_FILE="${HOME}/.bashrc"
 
 PYENV_GIT="https://github.com/yyuu/pyenv.git"
 VIRTUALENV_GIT="https://github.com/yyuu/pyenv-virtualenv.git"
+
+HOME="${HOME}"
+
+usage_exit() {
+  echo "Usage: $0 [-p profile_file] [-h]" 1>&2
+  exit 1
+}
+
+while getopts p:h OPT
+do
+  case $OPT in
+    p) PROFILE_FILE=$OPTARG ;;
+    h) usage_exit ;;
+    \?) usage_exit ;;
+  esac
+done
 
 echo "Install pyenv and virtualenv..."
 git clone ${PYENV_GIT} ${HOME}/.pyenv

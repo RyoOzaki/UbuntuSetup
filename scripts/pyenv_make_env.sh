@@ -1,7 +1,7 @@
 #!/bin/bash
 
 usage_exit() {
-  echo "Usage: $0 [-v version] [-n name] [-h]" 1>&2
+  echo "Usage: $0 -v version -n name [-h]" 1>&2
   exit 1
 }
 
@@ -10,7 +10,7 @@ do
   case $OPT in
     v) PYTHON_VERSION=$OPTARG ;;
     n) VIRTUALENV_NAME=$OPTARG ;;
-    h)  usage_exit ;;
+    h) usage_exit ;;
     \?) usage_exit ;;
   esac
 done
