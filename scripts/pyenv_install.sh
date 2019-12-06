@@ -15,7 +15,10 @@ echo "Setting profile of pyenv and virtualenv..."
 echo >> ${PROFILE_FILE}
 echo '# pyenv commands.' >> ${PROFILE_FILE}
 echo 'export PYENV_ROOT=${HOME}/.pyenv' >> ${PROFILE_FILE}
-echo 'export PATH=${PYENV_ROOT}/bin:${PATH}' >> ${PROFILE_FILE}
-echo 'eval "$(pyenv init -)"' >> ${PROFILE_FILE}
+echo 'if [ -d "${PYENV_ROOT}" ]; then' >> ${PROFILE_FILE}
+echo '    export PATH=${PYENV_ROOT}/bin:$PATH' >> ${PROFILE_FILE}
+echo '    eval "$(pyenv init -)"' >> ${PROFILE_FILE}
+echo '    eval "$(pyenv virtualenv-init -)"' >> ${PROFILE_FILE}
+echo 'fi' >> ${PROFILE_FILE}
 
 echo "Done."
