@@ -11,3 +11,10 @@ sox
 texlive-full
 atom
 wget
+libdb-dev
+libffi-dev
+libgdbm-dev
+liblzma-dev
+libncursesw5-dev
+zlib1g-dev
+uuid-dev
